@@ -1,0 +1,713 @@
+/* =============== style halaman index =============== */
+/* ========== MOBILE FIRST (DEFAULT) ========== */
+
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #f9faff;
+}
+
+/* HEADER MOBILE */
+header {
+  display: flex;
+  flex-direction: row; /* mobile: logo kiri, hamburger kanan */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  margin: 0;
+  font-family: Comfortaa;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+header nav {
+  display: flex;
+  gap: 30px;
+  position: fixed;
+  top: 70px;
+
+  /* FULL LEBAR LAYAR */
+  left: 20px;
+  right: 20px;
+  width: auto;
+  margin: 0 auto;
+
+  flex-direction: column;
+  background-color: #f9faff;
+  padding: 10px 16px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background-color: rgba(249, 250, 255, 0.5);
+  display: none; /* MOBILE FIRST: disembunyikan */
+  z-index: 60;
+  text-align: center;
+}
+
+.nav-item {
+  margin: 0;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* HAMBURGER CHECKBOX (MOBILE FIRST) */
+#nav-toggle {
+  display: none; /* sembunyikan checkbox */
+}
+
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Saat checkbox dicentang → tampilkan nav (masih mobile) */
+#nav-toggle:checked ~ nav {
+  display: flex;
+}
+
+/* HERO MOBILE */
+.job-type {
+  color: #4df0de;
+  font-size: clamp(1.5rem, 6vw, 3rem);
+}
+
+.name {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  text-align: justify;
+}
+
+.about-me {
+  font-size: clamp(0.5rem, 4vw, 3rem);
+  font-family: Nunito;
+  text-align: justify;
+}
+
+.btn-project {
+  padding: 5px 10px;
+  background-color: #4df0de;
+  border: 1px solid #4df0de;
+  border-radius: 5px;
+  font-family: Roboto;
+  font-size: 18px;
+}
+
+.btn-linkedin {
+  padding: 5px 10px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 3px;
+  font-family: Roboto;
+  font-size: 18px;
+}
+
+/* HERO MOBILE */
+.hero-container {
+  display: flex;
+  flex-direction: row; /* teks kiri, gambar kanan */
+  align-items: center;
+  gap: 12px;
+  margin-left: 0;
+  position: relative; /* anchor untuk hero-img absolute */
+  padding-top: 600px;
+  padding-left: 50px;
+}
+
+.hero-text {
+  margin-top: 40px;
+  margin-left: 50px;
+  text-align: left;
+  position: relative;
+  z-index: 20;
+  max-width: 60%;
+}
+
+.hero-img {
+  position: absolute; /* jadi background bentuk kuning+foto */
+  top: -80px; /* tarik ke atas */
+  right: -10%; /* sedikit keluar kanan */
+  margin: 0;
+  transform: scale(1);
+  width: auto;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+}
+
+.card {
+  margin-top: 250px;
+}
+
+.card > div {
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+  margin-bottom: 40px;
+  padding: 0 10px;
+
+  .box1 {
+    order: 2;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  .box2 {
+    order: 1;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .box3 {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .box4 {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  .box5 {
+    order: 2;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  .box6 {
+    order: 1;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+
+/* .card > div .box1 + .box2 {
+  flex-direction: column-reverse;
+} */
+
+/* Semua box responsif mobile */
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6 {
+  width: 100%;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+}
+
+.box1,
+.box4,
+.box5 {
+  background-color: #ffffff;
+}
+
+.box1_h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 170px;
+  margin-left: 50px;
+}
+
+.box1_p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.btn-box1 {
+  display: block;
+  border-radius: 20px;
+  padding: 7px 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-left: 50px;
+}
+
+.box4_h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 170px;
+  margin-left: 50px;
+}
+
+.box4_p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.btn-box4 {
+  display: block;
+  border-radius: 20px;
+  padding: 7px 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-left: 50px;
+}
+
+.box5_h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 170px;
+  margin-left: 50px;
+}
+
+.box5_p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.btn-box5 {
+  display: block;
+  border-radius: 20px;
+  padding: 7px 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-left: 50px;
+}
+
+.box2 {
+  background-image: url("./assets/box1.png");
+}
+
+.box3 {
+  background-image: url("./assets/box2.png");
+}
+
+.box6 {
+  background-image: url("./assets/box3.png");
+}
+
+.footer-wave {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-wave img {
+  width: 100%;
+  display: block; /* WAJIB: hilangkan jarak kosong default */
+  margin: 0;
+  padding: 0;
+}
+
+.title-project {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.title-contact {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.project-hr {
+  width: 85px;
+  margin: -25px auto 40px auto;
+  border: 2px solid #4df0de;
+}
+
+.contact-hr {
+  width: 100px;
+  margin: -25px auto 40px auto;
+  border: 2px solid #4df0de;
+}
+
+.label-name {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input-name {
+  width: 300px;
+  border: 1px solid #e8ecf4;
+  height: 25px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.label-mail {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input-mail {
+  width: 300px;
+  border: 1px solid #e8ecf4;
+  height: 25px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.label-message {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input-message {
+  width: 300px;
+  border: 1px solid #e8ecf4;
+  height: 160px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.btn-send {
+  margin-left: 210px;
+  padding: 5px 30px;
+  background-color: #4df0de;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ========== DESKTOP (OVERRIDE) ========== */
+@media screen and (min-width: 1024px) {
+  .hamburger {
+    display: none; /* desktop: hamburger hilang */
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.15);
+  }
+
+  header nav {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    margin-top: -50px;
+    margin-right: 70px;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    display: flex; /* desktop: nav selalu kelihatan */
+    width: auto;
+    left: auto;
+  }
+
+  .logo {
+    margin: 0;
+    font-family: Comfortaa;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+
+  .nav-item {
+    margin: 0;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  /* HERO DESKTOP */
+  .job-type {
+    color: #4df0de;
+    font-size: 28px;
+  }
+
+  .name {
+    font-size: 40px;
+  }
+
+  .about-me {
+    font-size: 24px;
+    font-family: Nunito;
+    text-align: justify;
+    max-width: 570px;
+  }
+
+  .hero-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 70px 100px;
+    position: relative;
+  }
+
+  .hero-img {
+    position: absolute;
+    top: -70px;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    margin-bottom: 50px;
+    transform: translateX(30%) scale(1);
+  }
+
+  .hero-text {
+    margin-top: 80px;
+    /* text-align: left; */
+  }
+
+  .btn-project {
+    /* padding: 7px 10px; */
+    padding: auto;
+    background-color: #4df0de;
+    border: 1px solid #4df0de;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-size: 18px;
+  }
+
+  .btn-linkedin {
+    padding: auto;
+    /* padding: 7px 10px; */
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-family: Roboto;
+    font-size: 18px;
+  }
+
+  /* CARD DESKTOP */
+  .card {
+    margin-top: 300px;
+  }
+
+  .card > div {
+    flex-direction: row;
+    gap: 0;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .title-project {
+    display: flex;
+    justify-content: center;
+    margin-top: -250px;
+    font-size: 48px;
+  }
+
+  .title-contact {
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+  }
+
+  .project-hr {
+    width: 85px;
+    margin: -25px auto 40px auto;
+    border: 2px solid #4df0de;
+  }
+
+  .contact-hr {
+    width: 100px;
+    margin: -25px auto 40px auto;
+    border: 2px solid #4df0de;
+  }
+
+  /* BOX 496 × 526 */
+  .box1,
+  .box2,
+  .box3,
+  .box4,
+  .box5,
+  .box6 {
+    width: 496px;
+    height: 526px;
+  }
+
+  .box1 {
+    background-color: white;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .box1_h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 170px;
+    margin-left: 100px;
+  }
+
+  .box1_p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 100px;
+  }
+
+  .btn-box1 {
+    display: block;
+    border-radius: 20px;
+    padding: 7px 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    margin-left: 100px;
+  }
+
+  .box2 {
+    background-image: url("./assets/box1.png");
+    border-top-right-radius: 24px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .box3 {
+    background-image: url("./assets/box2.png");
+    border-top-left-radius: 24px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .box4 {
+    background-color: white;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .box4_h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 170px;
+    margin-left: 100px;
+  }
+
+  .box4_p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 100px;
+  }
+
+  .btn-box4 {
+    display: block;
+    border-radius: 20px;
+    padding: 7px 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    margin-left: 100px;
+  }
+
+  .box5 {
+    background-color: white;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .box5_h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 170px;
+    margin-left: 100px;
+  }
+
+  .box5_p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 100px;
+  }
+
+  .btn-box5 {
+    display: block;
+    border-radius: 20px;
+    padding: 7px 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    margin-left: 100px;
+  }
+
+  .box6 {
+    background-image: url("./assets/box3.png");
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+
+  .btn-send {
+    margin-left: 310px;
+    padding: 5px 30px;
+    background-color: #4df0de;
+    border: none;
+    border-radius: 8px;
+  }
+
+  .footer-wave {
+    margin: 0;
+    padding: 0;
+    margin-top: -50px;
+  }
+
+  .footer-wave img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .label-name {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .input-name {
+    width: 400px;
+    border: 1px solid #e8ecf4;
+    height: 25px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .label-mail {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .input-mail {
+    width: 400px;
+    border: 1px solid #e8ecf4;
+    height: 25px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .label-message {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .input-message {
+    width: 400px;
+    border: 1px solid #e8ecf4;
+    height: 160px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,321 @@
+/* ========== GLOBAL ========== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #f9faff;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ========== HEADER (MOBILE FIRST) ========== */
+header {
+  display: flex;
+  flex-direction: row; /* logo kiri, hamburger kanan */
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  position: relative;
+  z-index: 50;
+  background-color: #f9faff;
+  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  margin: 0;
+  font-family: Comfortaa, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* NAV MOBILE (dropdown) */
+header nav {
+  display: none; /* mobile first: disembunyikan */
+  gap: 16px;
+  position: fixed;
+  top: 64px;
+  left: 20px;
+  right: 20px;
+  width: auto;
+  margin: 0 auto;
+  flex-direction: column;
+  background-color: rgba(249, 250, 255, 0.95);
+  padding: 10px 16px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  z-index: 60;
+  text-align: center;
+}
+
+.nav-item {
+  margin: 0;
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #222222;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* HAMBURGER MOBILE */
+#nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+}
+
+#nav-toggle:checked ~ nav {
+  display: flex;
+}
+
+/* ========== ABOUT SECTION (MOBILE FIRST) ========== */
+.about-section {
+  display: flex;
+  flex-direction: column-reverse; /* mobile: teks atas, foto bawah */
+  align-items: center;
+  gap: 24px;
+  padding: 40px 20px 40px;
+}
+
+.about-content {
+  max-width: 420px;
+}
+
+.about-content h1 {
+  margin: 0 0 12px;
+  font-family: "Nunito", serif;
+  font-size: 24px;
+  color: #222;
+}
+
+.about-content p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+  font-size: 14px;
+  text-align: justify;
+}
+
+/* FOTO / SVG – MOBILE: 300 x 300 */
+.about-photo svg {
+  width: 300px;
+  height: 300px;
+  display: block;
+}
+
+.footer-wave {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-wave img {
+  width: 100%;
+  display: block; /* WAJIB: hilangkan jarak kosong default */
+  margin: 0;
+  padding: 0;
+}
+.title-contact {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+.contact-hr {
+  width: 100px;
+  margin: -25px auto 40px auto;
+  border: 2px solid #78fff0;
+}
+
+.label-name {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input-name {
+  width: 300px;
+  border: 1px solid #e8ecf4;
+  height: 25px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.label-mail {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input-mail {
+  width: 300px;
+  border: 1px solid #e8ecf4;
+  height: 25px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.label-message {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input-message {
+  width: 300px;
+  border: 1px solid #e8ecf4;
+  height: 160px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.btn-send {
+  margin-left: 210px;
+  padding: 5px 30px;
+  background-color: #78fff0;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ========== DESKTOP (>= 1024px) ========== */
+@media screen and (min-width: 1024px) {
+  .hamburger {
+    display: none; /* desktop: hamburger hilang */
+  }
+
+  header {
+    padding: 20px 50px;
+    box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.15);
+  }
+
+  header nav {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    gap: 30px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+    margin: 0;
+  }
+
+  .logo {
+    margin: 0;
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+
+  .nav-item {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  /* about dua kolom di desktop */
+  .about-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 100px 80px;
+  }
+
+  .about-content h1 {
+    font-size: 32px;
+  }
+
+  .about-content p {
+    font-size: 20px;
+    text-align: justify;
+  }
+
+  .about-content {
+    max-width: 600px;
+    margin-top: -50px;
+    margin-left: 150px;
+  }
+
+  /* FOTO / SVG – DESKTOP: 600 x 600 */
+  .about-photo svg {
+    width: 500px;
+    height: 500px;
+  }
+
+  .btn-send {
+    margin-left: 310px;
+    padding: 5px 30px;
+    background-color: #78fff0;
+    border: none;
+    border-radius: 8px;
+  }
+
+  .footer-wave {
+    margin: 0;
+    padding: 0;
+    margin-top: -50px;
+  }
+
+  .footer-wave img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .label-name {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .input-name {
+    width: 400px;
+    border: 1px solid #e8ecf4;
+    height: 25px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .label-mail {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .input-mail {
+    width: 400px;
+    border: 1px solid #e8ecf4;
+    height: 25px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .label-message {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .input-message {
+    width: 400px;
+    border: 1px solid #e8ecf4;
+    height: 160px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+
+  .title-contact {
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+  }
+
+  .contact-hr {
+    width: 100px;
+    margin: -25px auto 40px auto;
+    border: 2px solid #78fff0;
+  }
+}

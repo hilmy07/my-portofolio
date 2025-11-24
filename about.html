@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <p class="logo">Muhammad Hilmy Haidar Aly</p>
+
+      <!-- checkbox + label = hamburger (mobile first) -->
+      <input type="checkbox" id="nav-toggle" />
+      <label for="nav-toggle" class="hamburger">&#9776;</label>
+
+      <nav>
+        <a href="./about.html">
+          <p class="nav-item">About</p>
+        </a>
+        <a href="./index.html">
+          <p class="nav-item">Projects</p>
+        </a>
+        <a href="./contact.html">
+          <p class="nav-item">Contacts</p>
+        </a>
+      </nav>
+    </header>
+
+    <section class="about-section">
+      <div class="about-content">
+        <h1>About me</h1>
+        <p>
+          I’m Muhammad Hilmy Haidar Aly, a frontend developer from Indonesia who
+          enjoys turning interface ideas into clean, responsive web experiences.
+          My main focus is building React applications with modern tools like
+          Vite, Tailwind CSS, and the Context API, while keeping component
+          structures clean, maintainable, and easy to work with.
+        </p>
+      </div>
+
+      <div class="about-photo">
+        <svg viewBox="0 0 600 600">
+          <circle r="200" cx="250" cy="250" fill="#4DF0DE" />
+
+          <!-- Mask lingkaran -->
+          <mask id="svgmask1">
+            <rect width="600" height="400" fill="black" />
+            <circle r="200" cx="250" cy="250" fill="white" />
+          </mask>
+
+          <!-- Foto termask -->
+          <image
+            x="-50"
+            y="105"
+            width="600"
+            height="400"
+            href="./assets/hilmy.png"
+            mask="url(#svgmask1)"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h1 class="title-contact">Contact</h1>
+      <hr class="contact-hr" />
+      <form style="display: flex; flex-direction: column; align-items: center">
+        <div>
+          <label for="name" class="label-name">Name</label><br />
+          <input type="text" id="name" class="input-name" />
+        </div>
+        <div>
+          <label for="email" class="label-mail">Email</label><br />
+          <input type="email" id="email" class="input-mail" />
+        </div>
+        <div>
+          <label for="message" class="label-message">Message</label><br />
+          <textarea
+            name="message"
+            id="message"
+            class="input-message"
+          ></textarea>
+        </div>
+        <button class="btn-send">Send</button>
+      </form>
+    </section>
+
+    <footer>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          margin-top: 50px;
+          position: relative;
+          z-index: 10;
+          gap: 30px;
+        "
+      >
+        <div>
+          <a href="https://www.instagram.com/hilmy98/" target="_blank"
+            ><img
+              src="./assets/instagram.png"
+              alt="instagram"
+              style="
+                width: 30px;
+                height: 30px;
+                display: block;
+                object-fit: contain;
+              "
+          /></a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/m-hilmy/" target="_blank"
+            ><img
+              src="./assets/linkedin.png"
+              alt="linkedin"
+              style="
+                width: 30px;
+                height: 30px;
+                display: block;
+                object-fit: contain;
+              "
+          /></a>
+        </div>
+        <div style="width: 50px; height: 50px">
+          <a href="https://mail.google.com/" target="_blank"
+            ><img
+              src="./assets/email.png"
+              alt="mail"
+              style="
+                width: 30px;
+                height: 30px;
+                display: block;
+                object-fit: contain;
+              "
+          /></a>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: center; margin-top: -20px">
+        <p>Muhammad Hilmy Haidar Aly 2025</p>
+      </div>
+      <div class="footer-wave">
+        <img src="./assets/Vector.png" alt="footer" />
+      </div>
+    </footer>
+  </body>
+</html>
