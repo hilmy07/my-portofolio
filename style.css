@@ -499,6 +499,34 @@ header nav {
     gap: 0;
     justify-content: center;
     padding: 0;
+
+    .box1 {
+      order: 1;
+      border-top-left-radius: 24px;
+    }
+
+    .box2 {
+      order: 2;
+      border-bottom-right-radius: 24px;
+    }
+
+    .box3 {
+      border-bottom-left-radius: 24px;
+    }
+
+    .box4 {
+      border-top-right-radius: 24px;
+    }
+
+    .box5 {
+      order: 1;
+      border-top-left-radius: 24px;
+    }
+
+    .box6 {
+      order: 2;
+      border-bottom-right-radius: 24px;
+    }
   }
 
   .title-project {
