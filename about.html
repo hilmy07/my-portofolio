@@ -47,65 +47,66 @@
       </nav>
     </header>
 
-    <section class="about-section">
-      <div class="about-content">
-        <h1>About me</h1>
-        <p>
-          I’m Muhammad Hilmy Haidar Aly, a frontend developer from Indonesia who
-          enjoys turning interface ideas into clean, responsive web experiences.
-          My main focus is building React applications with modern tools like
-          Vite, Tailwind CSS, and the Context API, while keeping component
-          structures clean, maintainable, and easy to work with.
-        </p>
-      </div>
-
-      <div class="about-photo">
-        <svg viewBox="0 0 600 600">
-          <circle r="200" cx="250" cy="250" fill="#4DF0DE" />
-
-          <!-- Mask lingkaran -->
-          <mask id="svgmask1">
-            <rect width="600" height="400" fill="black" />
-            <circle r="200" cx="250" cy="250" fill="white" />
-          </mask>
-
-          <!-- Foto termask -->
-          <image
-            x="-50"
-            y="105"
-            width="600"
-            height="400"
-            href="./assets/hilmy.png"
-            mask="url(#svgmask1)"
-          />
-        </svg>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section>
-      <h1 class="title-contact">Contact</h1>
-      <hr class="contact-hr" />
-      <form style="display: flex; flex-direction: column; align-items: center">
-        <div>
-          <label for="name" class="label-name">Name</label><br />
-          <input type="text" id="name" class="input-name" />
+    <main>
+      <section class="about-section">
+        <div class="about-content">
+          <h1>About me</h1>
+          <p>
+            I’m Muhammad Hilmy Haidar Aly, a frontend developer from Indonesia
+            who enjoys turning interface ideas into clean, responsive web
+            experiences. My main focus is building React applications with
+            modern tools like Vite, Tailwind CSS, and the Context API, while
+            keeping component structures clean, maintainable, and easy to work
+            with.
+          </p>
         </div>
-        <div>
-          <label for="email" class="label-mail">Email</label><br />
-          <input type="email" id="email" class="input-mail" />
+        <div class="about-photo">
+          <svg viewBox="0 0 600 600">
+            <circle r="200" cx="250" cy="250" fill="#4DF0DE" />
+            <!-- Mask lingkaran -->
+            <mask id="svgmask1">
+              <rect width="600" height="400" fill="black" />
+              <circle r="200" cx="250" cy="250" fill="white" />
+            </mask>
+            <!-- Foto termask -->
+            <image
+              x="-50"
+              y="105"
+              width="600"
+              height="400"
+              href="./assets/hilmy.png"
+              mask="url(#svgmask1)"
+            />
+          </svg>
         </div>
-        <div>
-          <label for="message" class="label-message">Message</label><br />
-          <textarea
-            name="message"
-            id="message"
-            class="input-message"
-          ></textarea>
-        </div>
-        <button class="btn-send">Send</button>
-      </form>
-    </section>
+      </section>
+      <!-- Contact -->
+      <section>
+        <h1 class="title-contact">Contact</h1>
+        <hr class="contact-hr" />
+        <form
+          style="display: flex; flex-direction: column; align-items: center"
+        >
+          <div>
+            <label for="name" class="label-name">Name</label><br />
+            <input type="text" id="name" class="input-name" />
+          </div>
+          <div>
+            <label for="email" class="label-mail">Email</label><br />
+            <input type="email" id="email" class="input-mail" />
+          </div>
+          <div>
+            <label for="message" class="label-message">Message</label><br />
+            <textarea
+              name="message"
+              id="message"
+              class="input-message"
+            ></textarea>
+          </div>
+          <button class="btn-send">Send</button>
+        </form>
+      </section>
+    </main>
 
     <footer>
       <div
